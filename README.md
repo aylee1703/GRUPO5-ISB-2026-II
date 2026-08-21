@@ -1,4 +1,4 @@
-# GRUPOX-ISB-2026-II
+# GRUPO5-ISB-2026-II
 
 ## Introducción de Señales Biomédicas
 
