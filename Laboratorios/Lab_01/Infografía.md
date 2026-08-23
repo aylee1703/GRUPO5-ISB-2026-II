@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧬 Introducción a las Señales Biomédicas
+# 🧬 Introducción a Señales Biomédicas
 
 
 **De la homeostasis celular a la adquisición y procesamiento de señales fisiológicas**
