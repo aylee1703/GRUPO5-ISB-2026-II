@@ -1,12 +1,12 @@
 # GRUPO5-ISB-2026-II
 
-## Introducción de Señales Biomédicas
+## Introducción a Señales Biomédicas
 
-Repositorio correspondiente al curso **Introducción de Señales Biomédicas**, donde se recopilan los laboratorios, certificados y avances del proyecto desarrollado durante el semestre **2026-II**.
+Repositorio correspondiente al curso **Introducción a Señales Biomédicas**, donde se recopilan los laboratorios, certificados y avances del proyecto desarrollado durante el semestre **2026-II**.
 
 ## Integrantes
 
-Somos un grupo de estudiantes del curso **Introducción de Señales Biomédicas**. En este repositorio organizamos y documentamos las actividades realizadas durante el semestre, incluyendo los laboratorios, certificados y el desarrollo del proyecto de señales biomédicas.
+Somos un grupo de estudiantes de ingenieria biomédica del curso **Introducción a Señales Biomédicas**. En este repositorio organizaremos y documentaremos las actividades realizadas durante el semestre, incluyendo los laboratorios, certificados y el desarrollo del proyecto.
 
 | Integrante                          | Correo institucional                                    |
 | ----------------------------------- | ------------------------------------------------------- |
@@ -14,22 +14,6 @@ Somos un grupo de estudiantes del curso **Introducción de Señales Biomédicas*
 | SIMEON QUISPE, AYLEE MARIA FERNANDA | [AYLEE.SIMEON@UPCH.PE](mailto:AYLEE.SIMEON@UPCH.PE)     |
 | VILA JARA, KEVIN BRYAN              | [KEVIN.VILA@UPCH.PE](mailto:KEVIN.VILA@UPCH.PE)         |
 | BRAVO PALACIOS, CARLA ARIANA        | [CARLA.BRAVO@UPCH.PE](mailto:CARLA.BRAVO@UPCH.PE)       |
-
-## Sobre el curso
-
-El curso desarrolla los fundamentos necesarios para la adquisición, procesamiento y análisis de señales biomédicas provenientes de dispositivos médicos. Se estudian aspectos relacionados con sensores, sistemas de adquisición, fisiología, electrónica, informática médica y procesamiento de señales.
-
-Las actividades combinan la teoría con prácticas de laboratorio, utilizando **Python**, simulaciones y kits de desarrollo para la adquisición y procesamiento de bioseñales.
-
-Entre las principales señales biomédicas abordadas se encuentran las señales **electrocardiográficas (ECG), electromiográficas (EMG) y electroencefalográficas (EEG)**.
-
-## Objetivos del curso
-
-* Comprender las características de las diferentes señales biomédicas y su relación con los principios fisiológicos y métodos de adquisición.
-* Desarrollar algoritmos para el procesamiento de señales biomédicas utilizando Python.
-* Aplicar conceptos básicos de sistemas de información y telemedicina.
-* Desarrollar soluciones de ingeniería mediante un prototipo basado en señales biomédicas.
-* Introducir conceptos relacionados con **Tiny Machine Learning** y análisis de datos estructurados.
 
 ## Contenido del repositorio
 
@@ -63,9 +47,3 @@ Contiene los avances y materiales relacionados con el proyecto final del curso.
 * **Jupyter Notebook**
 * Kits de desarrollo para adquisición de bioseñales
 * Herramientas de simulación y procesamiento de señales
-
-## Información del curso
-
-**Asignatura:** Introducción de Señales Biomédicas
-**Periodo:** 2026-II
-**Repositorio:** GRUPOX-ISB-2026-II
