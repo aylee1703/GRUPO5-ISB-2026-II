@@ -1,11 +1,9 @@
 # Informe de laboratorio — Lab_01
-## Control de versiones con Git, GitHub y Visual Studio Code
+## Git, GitHub y Visual Studio Code
 
-**Curso:** Introducción a Señales Biomédicas (C1132)
-**Universidad:** Universidad Peruana Cayetano Heredia (UPCH)
-**Ciclo:** 7 — 2026-II
-**Grupo:** GRUPO5-ISB-2026-II
-**Fecha:** *(completar)*
+**Curso:** Introducción a Señales Biomédicas
+**Ciclo:** 2026-II
+**Grupo:** 5
 
 ---
 
@@ -17,8 +15,7 @@
 4. [Procedimiento](#4-procedimiento)
 5. [Resultados y evidencias](#5-resultados-y-evidencias)
 6. [Buenas prácticas y recomendaciones](#6-buenas-prácticas-y-recomendaciones)
-7. [Conclusiones](#7-conclusiones)
-8. [Referencias](#8-referencias)
+7. [Referencias](#7-referencias)
 
 ---
 
@@ -206,11 +203,8 @@ git branch -vv               # verifica qué rama remota sigue cada rama local
 - Escribir mensajes de commit claros y descriptivos.
 - Para archivos binarios grandes (`.pth`, `.ipynb`, `.png`, etc.), considerar Git LFS.
 
-## 7. Conclusiones
 
-*(Redactar 2-3 conclusiones propias del equipo: qué aprendieron, qué dificultades tuvieron al configurar Git/GitHub/VS Code, cómo este flujo de trabajo les servirá para el resto del curso y el proyecto final.)*
-
-## 8. Referencias
+## 7. Referencias
 
 - Meza, M. (2025). *Getting Started with Git and GitHub*. Material de clase, curso Introducción a Señales Biomédicas, UPCH.
 - Documentación oficial de Git: [https://git-scm.com/doc](https://git-scm.com/doc)
