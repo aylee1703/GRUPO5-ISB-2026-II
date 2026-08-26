@@ -195,7 +195,7 @@ git branch -vv               # verifica qué rama remota sigue cada rama local
 
 **Figura 1. Inicialización del repositorio en VS Code.**
 
-[![Figura 1. Inicialización del repositorio en VS Code.](../../inicializar-repositorio.jpeg)
+![Figura 1. Inicialización del repositorio en VS Code.](../../inicializar-repositorio.jpeg)
 
 
 ## 6. Buenas prácticas y recomendaciones
