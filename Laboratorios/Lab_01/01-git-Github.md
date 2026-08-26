@@ -192,6 +192,8 @@ git branch -vv               # verifica qué rama remota sigue cada rama local
 ## 5. Resultados y evidencias
 
 *(En esta sección insertar las capturas de pantalla y/o GIFs propios del equipo que evidencien cada paso del procedimiento: creación del repositorio, commits realizados, ramas creadas, publicación desde VS Code, estructura final de carpetas del repositorio, etc. Se recomienda numerar las figuras, ej. "Figura 1. Inicialización del repositorio en VS Code".)*
+**Figura 1. Inicialización del repositorio en VS Code.**
+
 ![![Figura 1. Inicialización del repositorio en VS Code.](../../inicializar-repositorio.jpeg)
 
 
