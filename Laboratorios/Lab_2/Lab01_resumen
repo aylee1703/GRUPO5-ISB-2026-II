@@ -105,3 +105,74 @@ Representa el canal de señal del ECG (electrocardiograma) que fue grabado en la
 * **Morfología:** El registro `100` muestra un ritmo sinusal uniforme, mientras que el registro `200` presenta una morfología irregular con presencia de extrasístoles ventriculares (latidos anómalos anchos y picos invertidos).
 * **Amplitud:** El registro `100` oscila mayormente entre **-0.5 mV y 1.2 mV**. El registro `200` expande su rango bruscamente, pues alcanza picos negativos hasta **-2.2 mV** y positivos superiores a **1.1 mV**.
 * **Distribución:** El histograma del registro `200` es mucho más asimétrico y disperso, mostrando una cola prominente en los valores negativos generada por la caída de voltaje de los latidos atípicos. En resumen, el registro `100` presenta un ECG normal que se observa de manera estable y uniforme, mientras que el registro `200` muestra una patología clara (extrasístoles ventriculares) que distorsiona la forma de la onda, duplica el rango de voltaje llegando hasta **-2.2 mV** y ensancha la distribución en el histograma.
+
+### Ejercicio 2: Análisis del Segundo Canal (`V5`)
+
+1. **¿Qué nombre tiene el nuevo canal?**  
+   `V5`
+
+2. **¿Tiene las mismas unidades?**  
+   Sí, se mantiene en **mV** (milivoltios).
+
+3. **¿La morfología es igual?**  
+   No, la morfología cambia significativamente respecto al canal 0 (`MLII`).
+
+4. **¿Qué diferencias observa?**  
+   Cambia la orientación y la amplitud del complejo QRS.
+
+---
+
+### Ejercicio 3: Comparación de Ventanas de Visualización
+
+* **Explique por qué una duración demasiado pequeña o demasiado grande puede dificultar el análisis:**  
+  La comparación entre ambas demuestra que una duración de **5 s** permite inspeccionar a detalle la morfología de las ondas e identificar el ruido; sin embargo, abarca muy pocos latidos para evaluar el ritmo cardíaco. Por otro lado, una duración de **20 s** ayuda a visualizar la regularidad del ritmo cardíaco, pero comprime los ciclos cardíacos, lo que impide medir con precisión la duración de los intervalos y la amplitud de los picos.
+
+---
+
+### Ejercicio 4: Cálculos y Muestreo ($f_s = 360\text{ Hz}$)
+
+#### a) Calcule el periodo de muestreo ($T_s$):
+$$T_s = \frac{1}{f_s} = \frac{1}{360\text{ Hz}} \approx 0.00278\text{ s} = 2.78\text{ ms}$$
+
+#### b) ¿Cuántas muestras existen en 5 segundos?
+$$N_{5\text{s}} = f_s \times t = 360 \times 5 = 1800\text{ muestras}$$
+
+#### c) ¿Cuántas muestras existen en 10 segundos?
+$$N_{10\text{s}} = f_s \times t = 360 \times 10 = 3600\text{ muestras}$$
+
+#### d) Explique qué sucedería si la frecuencia de muestreo fuese reducida significativamente:
+En caso de que la frecuencia baje mucho, el sistema tomaría muy pocos puntos por segundo y la señal perdería definición. Seguidamente, los picos del ECG (como el complejo QRS) se verían deformados e incluso se podría incumplir el criterio de Nyquist, distorsionando la forma de la onda y conduciendo a un mal diagnóstico.
+
+---
+
+## 3. Preguntas Conceptuales
+
+1. **¿Qué es PhysioNet?**  
+   Es un repositorio que cuenta con datos de señales biomédicas para estudio e investigación.
+
+2. **¿Qué diferencia existe entre `DATABASE` y `RECORD`?**  
+   `DATABASE` es la base de datos completa y `RECORD` es el archivo o registro de una persona en específico.
+
+3. **¿Qué representa `fs`?**  
+   La frecuencia de muestreo; indica cuántas muestras se toman por segundo.
+
+4. **¿Qué representa `CHANNEL`?**  
+   El canal del ECG que se va a graficar o analizar.
+
+5. **¿Qué representa `record.p_signal`?**  
+   La matriz que contiene los valores de voltaje de la señal expresados en mV.
+
+6. **¿Por qué necesitamos construir un eje temporal?**  
+   Porque los datos en origen vienen etiquetados por número de muestra ($n$) y necesitamos convertirlos a segundos reales ($t$) para su correcta interpretación clínica.
+
+7. **¿Qué diferencia existe entre una señal continua y una señal discreta?**  
+   La señal continua existe en todo instante de tiempo, mientras que la discreta solo toma valores en puntos temporales específicos.
+
+8. **¿Por qué no debemos interpretar directamente un archivo WAV como si fuera una señal ECG?**  
+   Porque el formato WAV está diseñado para audio y procesamiento acústico, no para calibraciones cuantitativas de voltaje biomédico.
+
+9. **¿Qué ventajas ofrece trabajar con señales biomédicas reales en lugar de señales sintéticas?**  
+   Nos permite analizar variaciones reales del paciente, ruidos biológicos auténticos y patologías complejas.
+
+10. **¿Qué dificultades encontró durante el laboratorio?**  
+    Había partes de los códigos un poco difíciles de entender y, en mi caso, no pude escuchar el audio para responder las preguntas requeridas en esa sección.
