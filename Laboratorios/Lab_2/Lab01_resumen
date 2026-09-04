@@ -1,0 +1,107 @@
+
+
+## Respuestas a los Ejercicios y Preguntas de Análisis
+
+### Pregunta Inicial
+**¿Qué cree que representa `CHANNEL = 0`?**  
+Representa el canal de señal del ECG (electrocardiograma) que fue grabado en la adquisición.
+
+---
+
+### Preguntas de Análisis 1 (Información del Registro)
+
+1. **¿Cuál es la frecuencia de muestreo del registro?**  
+   $$f_s = 360\text{ Hz}$$
+
+2. **¿Cuántos canales tiene?**  
+   Tiene **2 canales** (`MLII` y `V5`).
+
+3. **¿Cómo se llama el canal seleccionado?**  
+   `MLII` (el cual corresponde al canal `0`).
+
+4. **¿Cuál es la duración total del registro?**  
+   **1805.56 segundos** (aproximadamente 30.09 minutos).
+
+5. **Si $f_s = 360\text{ Hz}$, ¿cuántas muestras se adquieren en 1 segundo?**  
+   Se adquieren **360 muestras**.
+
+6. **¿Cuántas muestras corresponden a un segmento de 10 segundos?**  
+   **3600 muestras** ($360 \times 10$).
+
+---
+
+### Preguntas de Análisis 2 (Visualización del Registro Completo)
+
+1. **¿La señal presenta una amplitud constante?**  
+   No, la amplitud va cambiando constantemente por el latido del corazón.
+
+2. **¿Se pueden identificar visualmente complejos QRS?**  
+   No se pueden visualizar muy claro ya que la señal muestra 30 minutos enteros juntos, por lo que no es posible distinguir cada latido por separado.
+
+3. **¿La morfología permanece igual durante todo el registro?**  
+   A primera vista, parece que permanece igual; sin embargo, hay zonas donde la señal se mueve hacia arriba o hacia abajo y presenta picos extraños.
+
+4. **¿Se observa ruido?**  
+   Sí, hay ruido en la línea base (donde la señal sube y baja); asimismo, alrededor del segundo 1520 se observa un pico gigante hacia abajo.
+
+5. **¿Qué ventajas tiene visualizar una señal durante varios minutos?**  
+   Nos ayuda a ver el estado general del paciente para saber si el corazón estuvo tranquilo durante toda la prueba o si en algún momento tuvo un susto, fallo o alteración que no saldría si solo tuviéramos una señal de 5 segundos.
+
+6. **¿Qué limitaciones tiene una gráfica demasiado extensa?**  
+   Que todo se ve apretado: al meter toda la información en una sola imagen, se pierden los detalles minuciosos y ya no se pueden distinguir la forma de las ondas (como la P, el complejo QRS o la T).
+
+---
+
+### Preguntas de Análisis 3 (Histograma y Distribución de Amplitud)
+
+1. **¿Dónde se concentra la mayor cantidad de muestras?**  
+   La mayor cantidad de muestras se encuentra entre **-0.4 mV y -0.2 mV**. Esto ocurre ya que casi todo el tiempo el corazón se encuentra en "reposo" (línea isoeléctrica).
+
+2. **¿La distribución parece simétrica?**  
+   No, ya que tiene valores que se encuentran desplazados hacia la derecha la mayor parte del tiempo, permaneciendo en valores bajos.
+
+3. **¿Existen valores extremos?**  
+   Sí, existen valores extremos que llegan cerca de **1.0 mV** en la parte positiva y cerca de **-0.6 mV** en la parte negativa.
+
+4. **¿Qué podría producir valores de amplitud muy diferentes al valor central?**  
+   Los picos R cuando el corazón se contrae, así como el ruido producido cuando el paciente se mueve o si el electrodo roza con alguna superficie.
+
+5. **¿El histograma conserva información temporal? Explique.**  
+   **No**, el histograma solo cuenta cuántas veces se repitió una determinada amplitud dentro de la señal, pero mezcla todas las muestras perdiendo la secuencia y el orden temporal en que ocurrieron.
+
+---
+
+### Preguntas de Análisis 4 (Muestreo y Eje Temporal Discreto)
+
+1. **¿Cuántas muestras existen por segundo?**  
+   Aproximadamente **360 muestras**.
+
+2. **¿Qué ocurre si aumentamos $f_s$?**  
+   Tomamos más muestras por segundo. La ventaja es que se pueden mostrar más puntos en la señal (mayor resolución temporal), pero la desventaja es que el archivo se vuelve más pesado.
+
+3. **¿Qué ocurre si disminuimos $f_s$?**  
+   Tomamos menos muestras por segundo, guardamos menos datos y la señal se empieza a ver sin forma, pudiendo perderse detalles importantes.
+
+4. **¿Qué representa el eje $n$ en una señal discreta?**  
+   Es la posición o el número de muestra ($n = 0, 1, 2, \dots$).
+
+5. **¿Cuál es la relación entre $n$, $f_s$ y $t$?**  
+   Existe la relación:
+   $$t = \frac{n}{f_s}$$
+   Esta fórmula nos sirve para saber en qué segundo exacto ocurrió determinada muestra.
+
+---
+
+### Preguntas de Análisis 5 (Conversión a Audio WAV)
+> **Nota:** No se pudo escuchar el audio, por lo que no fue posible responder a las preguntas 1 a 6 de esta sección.
+
+---
+
+### Ejercicio 1: Comparación entre Registro 100 y Registro 200
+
+* **Frecuencia de muestreo:** Ambas señales tienen la misma frecuencia ($360\text{ Hz}$) ya que comparten la misma tasa de muestreo de la base de datos.
+* **Número de canales:** Los dos registros cuentan con **2 canales** de grabación en paralelo.
+* **Nombres de canales:** Mantienen los mismos nombres (`MLII` y `V1`).
+* **Morfología:** El registro `100` muestra un ritmo sinusal uniforme, mientras que el registro `200` presenta una morfología irregular con presencia de extrasístoles ventriculares (latidos anómalos anchos y picos invertidos).
+* **Amplitud:** El registro `100` oscila mayormente entre **-0.5 mV y 1.2 mV**. El registro `200` expande su rango bruscamente, pues alcanza picos negativos hasta **-2.2 mV** y positivos superiores a **1.1 mV**.
+* **Distribución:** El histograma del registro `200` es mucho más asimétrico y disperso, mostrando una cola prominente en los valores negativos generada por la caída de voltaje de los latidos atípicos. En resumen, el registro `100` presenta un ECG normal que se observa de manera estable y uniforme, mientras que el registro `200` muestra una patología clara (extrasístoles ventriculares) que distorsiona la forma de la onda, duplica el rango de voltaje llegando hasta **-2.2 mV** y ensancha la distribución en el histograma.
