@@ -144,7 +144,24 @@ $$N_{10\text{s}} = f_s \times t = 360 \times 10 = 3600\text{ muestras}$$
 En caso de que la frecuencia baje mucho, el sistema tomaría muy pocos puntos por segundo y la señal perdería definición. Seguidamente, los picos del ECG (como el complejo QRS) se verían deformados e incluso se podría incumplir el criterio de Nyquist, distorsionando la forma de la onda y conduciendo a un mal diagnóstico.
 
 ---
+### Ejercicio 5: Análisis de Amplitud
 
+A partir del segmento seleccionado, se obtuvieron los siguientes datos estadísticos:
+
+1. **Media:** $0.0629 \text{ mV}$
+2. **Desviación Estándar:** $0.2250 \text{ mV}$
+3. **Valor Máximo:** $1.4350 \text{ mV}$
+4. **Valor Mínimo:** $-0.6750 \text{ mV}$
+5. **Rango:** $2.1100 \text{ mV}$
+
+#### Interpretación de Parámetros
+
+* **Media ($0.0629 \text{ mV}$):** Muestra que la señal está centrada en cero (sin nivel de DC u *offset*).
+* **Desviación Estándar ($0.2250 \text{ mV}$):** Mide la dispersión del voltaje; refleja la variabilidad generada por los latidos.
+* **Máximo ($1.4350 \text{ mV}$):** Deflexión positiva más alta, correspondiente a la **onda R**.
+* **Mínimo ($-0.6750 \text{ mV}$):** Deflexión negativa más profunda, asociada a las **ondas Q o S**.
+* **Rango ($2.1100 \text{ mV}$):** Voltaje pico a pico ($\text{Máx} - \text{Mín}$); establece el rango dinámico total.
+---
 ## 3. Preguntas Conceptuales
 
 1. **¿Qué es PhysioNet?**  
