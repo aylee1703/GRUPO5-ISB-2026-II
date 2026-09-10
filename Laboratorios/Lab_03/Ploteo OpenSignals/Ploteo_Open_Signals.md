@@ -20,37 +20,7 @@
 | **Kevin** | Tríceps Braquial | `triceps kevin.h5` | 1000 Hz | $> 1.5\text{ mV}$ (Saturada) |
 | **Kevin** | Bíceps Braquial | `biceps kevin.h5` | 1000 Hz | $> 1.5\text{ mV}$ (Saturada) |
 
-## **Montaje Experimental**
 
-### Configuración del sistema BITalino y Open Signals
-
-<p align="justify">
-Se utilizó el kit BITalino conectado a una laptop mediante Bluetooth, registrando la señal en tiempo real a través del software Open Signals (r)evolution a una frecuencia de muestreo de 1000 Hz por el canal analógico A1.
-</p>
-
-<p align="center"><img src="WhatsApp_Image_2026-09-10_at_11_47_38_AM.jpeg" width="700" height="500"></p>
-
----
-
-### Colocación de electrodos en el bíceps braquial
-
-<p align="justify">
-Los electrodos se ubicaron de forma bipolar sobre el vientre muscular del bíceps braquial, alineados con la dirección de las fibras musculares, con una separación no mayor a 2 cm entre ellos.
-</p>
-
-<p align="center"><img src="WhatsApp_Image_2026-09-10_at_11_47_43_AM.jpeg" width="400" height="700"></p>
-
----
-
-### Sistema BITalino conectado al sujeto de prueba
-
-<p align="justify">
-Vista del montaje completo: electrodos colocados sobre el bíceps braquial y conectados a la placa BITalino, lista para la adquisición de la señal EMG.
-</p>
-
-<p align="center"><img src="1789059079624_image.png" width="400" height="500"></p>
-
----
 
 </div>
 
