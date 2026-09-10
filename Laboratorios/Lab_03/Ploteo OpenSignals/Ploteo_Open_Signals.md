@@ -6,7 +6,8 @@
 2. [Resultados](#id2)\
      2.1 [Prueba 1 – Tríceps braquial (Leo)](#id3)\
      2.2 [Prueba 2 – Tríceps braquial (Kevin)](#id4)\
-     2.3 [Prueba 3 – Bíceps braquial (Kevin)](#id5)
+     2.3 [Prueba 3 – Bíceps braquial (Kevin)](#id5)\
+     2.4 [Procedimiento de adquisición en OpenSignals](#id8)
 3. [Discusión y comparativa](#id6)
 4. [Conclusión](#id7)
 
@@ -63,6 +64,40 @@ Señal registrada a partir del archivo <code>biceps kevin.h5</code>, correspondi
 <p align="center"><img src="bicep%20kevin.png" width="800" height="500"></p>
 
 > **Observación:** Fase inicial de activación moderada seguida de un pico de esfuerzo máximo sostenido con reclutamiento completo y saturación de la señal.
+
+---
+
+### **Procedimiento de adquisición en OpenSignals** <a name="id8"></a>
+
+<p align="justify">
+Previo al registro de las señales presentadas, se realizó el emparejamiento del dispositivo BITalino vía Bluetooth con el software OpenSignals (r)evolution, habilitándolo para iniciar la comunicación con la laptop.
+</p>
+<p align="center"><img src="bitalino_dispositivo_encontrado.jpeg" width="500" height="300"></p>
+
+<p align="justify">
+Se configuró el canal analógico correspondiente al sensor EMG (A1), estableciendo una frecuencia de muestreo de <b>1000 Hz</b> para garantizar una adecuada resolución temporal de la señal mioeléctrica.
+</p>
+<p align="center"><img src="bitalino_configuracion_canales.jpeg" width="500" height="300"></p>
+
+<p align="justify">
+Se colocaron los electrodos de superficie sobre el vientre muscular evaluado, siguiendo la orientación de las fibras, junto con el electrodo de referencia (tierra) sobre una superficie ósea cercana.
+</p>
+<p align="center"><img src="electrodos_colocacion_biceps.jpeg" width="500" height="700"></p>
+
+<p align="justify">
+Con el dispositivo conectado y los electrodos colocados, se inició la adquisición de la señal desde OpenSignals.
+</p>
+<p align="center"><img src="opensignals_iniciando_adquisicion.jpeg" width="600" height="300"></p>
+
+<p align="justify">
+Durante la adquisición se visualizó en tiempo real la señal EMG cruda proveniente del canal A1, observándose el registro correspondiente a la fase de reposo previa a la contracción.
+</p>
+<p align="center"><img src="laptop_opensignals_senal_biceps.jpeg" width="600" height="400"></p>
+
+<p align="justify">
+Al concluir el registro, la señal se guardó en formato <code>.h5</code> y <code>.txt</code> mediante el explorador local de archivos de OpenSignals, para su posterior análisis en Python.
+</p>
+<p align="center"><img src="opensignals_guardar_archivo.jpeg" width="600" height="400"></p>
 
 ---
 
