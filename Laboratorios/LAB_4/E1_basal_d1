@@ -1,0 +1,31 @@
+import neurokit2 as nk
+import numpy as np
+import matplotlib.pyplot as plt
+from opensignalsreader import OpenSignalsReader
+
+# Leer archivo
+archivo = '/content/derivacion 1 basal.txt'
+ekg = OpenSignalsReader(archivo)
+signal = ekg.signal(2)
+
+fs = 1000
+
+# Segmento 10-30 s
+inicio = int(10*fs)
+fin = int(30*fs)
+
+ecg_segment = signal[inicio:fin]
+
+# Procesamiento completo ECG
+signals, info = nk.ecg_process(ecg_segment, sampling_rate=fs)
+
+# Graficar panel completo automático
+nk.ecg_plot(signals, info)
+
+plt.gcf().set_size_inches(16,10)    # tamaño total figura
+plt.subplots_adjust(
+    hspace=0.5,    # separación vertical entre subplots
+    wspace=0.3     # separación horizontal
+)
+
+plt.show()
