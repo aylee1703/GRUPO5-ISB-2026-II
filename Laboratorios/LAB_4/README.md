@@ -1,12 +1,12 @@
 <div align="center">
 
-# Laboratorio 5
+# Laboratorio 4
 
-<img width="850" height="300" alt="Universidad Peruana Cayetano Heredia" src="https://github.com/user-attachments/assets/294153a6-16c6-40be-b47a-d5d1e62aee72" />
+<img width="600" height="200" alt="Universidad Peruana Cayetano Heredia" src="https://github.com/user-attachments/assets/294153a6-16c6-40be-b47a-d5d1e62aee72" />
 
-### Adquisición y análisis de señales electrocardiográficas (ECG) en tres derivaciones mediante electrodos superficiales y el sistema BITalino
+### Adquisición y análisis de señales electrocardiográficas (ECG)
 
-**Evaluación de la actividad cardíaca en reposo, hiperventilación, hipoventilación y actividad aeróbica**
+**Evaluación de la actividad cardíaca**
 
 </div>
 
