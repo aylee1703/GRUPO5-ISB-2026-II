@@ -60,6 +60,14 @@ Se utilizaron tres electrodos superficiales para obtener las derivaciones I, II 
 
 > Las figuras metodológicas se identifican como **M1–M3** para no alterar la numeración original de las figuras de resultados.
 
+### Evidencia de la actividad física realizada
+
+Como parte del protocolo experimental, el participante realizó actividad física aeróbica antes de la adquisición de las señales ECG. El siguiente video documenta la ejecución de la actividad utilizada para generar el estado fisiológico posterior al ejercicio.
+
+https://github.com/user-attachments/assets/7ea11b55-9e37-4386-8d88-f96370765d86
+
+**Video 1.** Evidencia de la actividad física realizada durante el protocolo experimental. [Elaboración propia]
+
 ### 3. Protocolo experimental
 
 | Condición | Procedimiento | Registro |
