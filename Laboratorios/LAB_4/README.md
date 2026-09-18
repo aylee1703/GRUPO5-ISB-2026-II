@@ -63,8 +63,20 @@ Se observa una frecuencia cardíaca promedio de 63.1 bpm, con un pico de 66.4 bp
 
 ### IV. Señal ECG obtenida después de la actividad aeróbica
 
-<!-- Arrastra aquí la imagen de Figura 10 (Actividad aeróbica) -->
+<img width="1316" height="900" alt="AERO_D1" src="https://github.com/user-attachments/assets/ba46399b-c7c3-4ba1-abe8-86ddd4f020f6" />
 
-**Figura 10:** Procesamiento de señal ECG con detección de picos R, cálculo de frecuencia cardíaca y promedio de latidos - ECG después de la actividad aeróbica (trote/polichinelas). [Elaboración propia]
+**Figura 10:** Procesamiento de señal ECG con detección de picos R, cálculo de frecuencia cardíaca y promedio de latidos - Actividad aeróbica (I Derivada) polichinelas. [Elaboración propia]
 
-<!-- Pendiente: completar descripción una vez se comparta la señal -->
+Se observa una frecuencia cardíaca promedio de 100.6 bpm, la más elevada registrada hasta ahora en esta derivación, con un incremento marcado hacia el final del registro donde alcanza un pico de 113 bpm cerca de los 15.5 s, seguido de una caída abrupta a 83 bpm a los 17.5 s, coherente con el esfuerzo físico y la posterior fase de recuperación. Los picos R presentan amplitudes entre 0.15 y 0.22, y el promedio de latidos muestra ondas P, Q, R, S y T identificables, aunque con notable dispersión entre latidos individuales, reflejando la inestabilidad propia del ritmo cardíaco durante y después del ejercicio.
+
+<img width="1325" height="896" alt="AERO_D2" src="https://github.com/user-attachments/assets/7111b0cd-2d81-4692-94cb-7dfc8fcd5d7c" />
+
+**Figura 11:** Procesamiento de señal ECG con detección de picos R, cálculo de frecuencia cardíaca y promedio de latidos - Actividad aeróbica (II Derivada) trotar. [Elaboración propia]
+
+Se observa una frecuencia cardíaca promedio de 104.8 bpm, con un pico de 112.5 bpm cerca de los 6.5 s y una caída notoria hasta 94 bpm entre los 14 y 15 s. Los picos R muestran amplitudes altas y consistentes, entre 0.6 y 0.85, propias de la II Derivada. El promedio de latidos evidencia ondas P, Q, R, S y T bien definidas, con dispersión moderada entre latidos individuales, menor que en la I Derivada, lo que sugiere una mejor calidad de señal en esta derivación durante el esfuerzo físico.
+
+<img width="1316" height="899" alt="AERO_D3" src="https://github.com/user-attachments/assets/5fed8ffc-c630-4597-a7b4-28a8dac61d4e" />
+
+**Figura 12:** Procesamiento de señal ECG con detección de picos R, cálculo de frecuencia cardíaca y promedio de latidos - Actividad aeróbica (III Derivada) escaladores. [Elaboración propia]
+
+Se observa una frecuencia cardíaca promedio de 120.1 bpm, la más elevada de las tres derivaciones bajo esta condición, con un pico marcado de 130.5 bpm a los 2.5 s al inicio del registro, reflejando el momento de mayor intensidad justo después del ejercicio. Los picos R presentan amplitudes entre 0.5 y 0.85, y el promedio de latidos muestra ondas P, Q, R, S y T bien definidas con dispersión moderada, consistente con el patrón de recuperación cardíaca post-esfuerzo observado en las tres derivaciones.
