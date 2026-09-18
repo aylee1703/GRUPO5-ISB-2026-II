@@ -2,19 +2,19 @@
 
 ### I. Lectura basal en reposo
 
-<!-- Arrastra aquí la imagen de Figura 1 (Basal DI) -->
+<img width="1269" height="879" alt="BAS_D1" src="https://github.com/user-attachments/assets/812ea086-9018-421d-9615-6a849e7d5a2d" />
 
 **Figura 1:** Procesamiento de señal ECG con detección de picos R, cálculo de frecuencia cardíaca y promedio de latidos - ECG obtenida en reposo (I Derivada). [Elaboración propia]
 
 Se observa una frecuencia cardíaca promedio de 59.0 bpm, con un pico de aproximadamente 61.5 bpm a los 7.5 segundos y una caída mínima de 57.5 bpm entre los 17 y 19 s, manteniéndose relativamente estable el resto del registro. Los picos R presentan amplitudes entre 0.13 y 0.2, y aunque la señal cruda muestra cierto nivel de ruido en la línea base, el promedio de latidos permite identificar con claridad la morfología de las ondas P, Q, R, S y T, sin alteraciones evidentes en la conducción.
 
-<!-- Arrastra aquí la imagen de Figura 2 (Basal DII) -->
+<img width="1246" height="858" alt="BAS_D2" src="https://github.com/user-attachments/assets/2ff099cd-1662-45c4-aa1d-8e44dd363b4b" />
 
 **Figura 2:** Procesamiento de señal ECG con detección de picos R, cálculo de frecuencia cardíaca y promedio de latidos - ECG obtenida en reposo (II Derivada). [Elaboración propia]
 
 Se observa una frecuencia cardíaca promedio de 53.4 bpm, con picos de hasta 56.3 bpm a los 2 segundos y una caída mínima de aproximadamente 51 bpm entre los 16 y 17 s, evidenciando mayor variabilidad que en la I Derivada. Los picos R presentan amplitudes considerablemente mayores, entre 0.75 y 0.9, consistente con lo esperado en la II Derivada al ser el eje de mayor proyección eléctrica del corazón. El promedio de latidos muestra ondas P, Q, R, S y T bien definidas, con un ligero artefacto hacia el final del registro (~19-20 s) donde la señal cruda se aparta de la señal limpia.
 
-<!-- Arrastra aquí la imagen de Figura 3 (Basal DIII) -->
+<img width="1316" height="908" alt="BAS_D3" src="https://github.com/user-attachments/assets/40673202-592b-4bd5-8bf3-3190fef40e3e" />
 
 **Figura 3:** Procesamiento de señal ECG con detección de picos R, cálculo de frecuencia cardíaca y promedio de latidos - ECG obtenida en reposo (III Derivada). [Elaboración propia]
 
