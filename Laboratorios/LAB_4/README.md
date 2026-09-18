@@ -1,3 +1,82 @@
+<div align="center">
+
+# Laboratorio 5
+
+<img width="850" height="300" alt="Universidad Peruana Cayetano Heredia" src="https://github.com/user-attachments/assets/294153a6-16c6-40be-b47a-d5d1e62aee72" />
+
+### Adquisición y análisis de señales electrocardiográficas (ECG) en tres derivaciones mediante electrodos superficiales y el sistema BITalino
+
+**Evaluación de la actividad cardíaca en reposo, hiperventilación, hipoventilación y actividad aeróbica**
+
+</div>
+
+---
+
+## Introducción
+
+La electrocardiografía (ECG) permite registrar de forma no invasiva la actividad eléctrica del corazón mediante electrodos colocados sobre la superficie corporal. En el trazado se identifican principalmente la onda P, el complejo QRS y la onda T, asociados con la despolarización auricular, la despolarización ventricular y la repolarización ventricular, respectivamente [1], [2].
+
+En esta práctica se empleó el sistema **BITalino** con su sensor ECG y el software **OpenSignals** para adquirir las derivaciones bipolares I, II y III de Einthoven, que permiten observar la actividad eléctrica cardíaca desde distintas orientaciones del plano frontal [2], [3]. Los registros se realizaron en cuatro condiciones: reposo basal, hiperventilación, hipoventilación y actividad aeróbica. El análisis se orientó a comparar la frecuencia cardíaca, la detección de picos R y la morfología del latido promedio entre las diferentes condiciones fisiológicas.
+
+**Objetivo:** adquirir y analizar señales ECG en tres derivaciones para identificar cambios en la frecuencia cardíaca y en la morfología de la señal ante distintas condiciones fisiológicas.
+
+## Metodología
+
+### 1. Materiales y equipos
+
+- Sistema de adquisición **BITalino**.
+- Sensor de electrocardiografía (ECG) y tres electrodos superficiales desechables.
+- Computadora portátil con **OpenSignals** para la adquisición de datos.
+- Entorno de procesamiento utilizado para visualizar la señal, detectar picos R y calcular la frecuencia cardíaca.
+- Cronómetro para controlar las maniobras respiratorias y la actividad física.
+
+### 2. Configuración de electrodos y conexión
+
+Se utilizaron tres electrodos superficiales para obtener las derivaciones I, II y III de Einthoven. La colocación anatómica, la polaridad de los terminales y la conexión del sensor ECG se verificaron de acuerdo con la guía oficial de BITalino [3]. Antes de cada registro se comprobó el contacto de los electrodos y la correcta recepción de la señal en OpenSignals.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/415bc0d4-8607-414c-97c0-1f3c39a65222" height="390"/>
+</p>
+
+<p align="center">
+  <b>Figura M1:</b> Configuración de electrodos para la adquisición de las derivaciones ECG [3].
+</p>
+
+<p align="center">
+  <img width="1600" height="738" alt="WhatsApp Image 2026-09-17 at 11 17 43 PM" src="https://github.com/user-attachments/assets/8a97b818-e271-408c-ab3a-12c44acdc5a5" />
+</p>
+
+<p align="center">
+  <b>Figura M2:</b> Conexión del sistema BITalino durante la adquisición de la señal ECG. [Elaboración propia]
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b6a2ee38-f45d-453f-a4be-39d1c502a91e" height="390"/>
+</p>
+
+<p align="center">
+  <b>Figura M3:</b> Configuración de polaridad de los electrodos [3].
+</p>
+
+> Las figuras metodológicas se identifican como **M1–M3** para no alterar la numeración original de las figuras de resultados.
+
+### 3. Protocolo experimental
+
+| Condición | Procedimiento | Registro |
+|---|---|---|
+| **Reposo basal** | El participante permaneció en reposo, evitando movimientos durante la adquisición. | Derivaciones I, II y III. |
+| **Hiperventilación** | Se realizó una maniobra de respiración profunda y acelerada; inmediatamente después se adquirió la señal ECG. | Derivaciones I, II y III. |
+| **Hipoventilación** | Se realizó una maniobra voluntaria de reducción/retención de la respiración y luego se registró la señal ECG. | Derivaciones I, II y III. |
+| **Actividad aeróbica** | Se realizaron ejercicios aeróbicos antes de cada adquisición: polichinelas, trote y escaladores. | DI después de polichinelas, DII después de trotar y DIII después de escaladores. |
+
+Las mediciones se realizaron procurando iniciar el registro inmediatamente después de cada maniobra para conservar el efecto fisiológico de la condición evaluada. La influencia de la respiración y del ejercicio sobre la frecuencia cardíaca y la señal ECG está documentada en la literatura fisiológica y experimental [4]–[8].
+
+### 4. Procesamiento de la señal
+
+Para cada registro se realizó el mismo flujo de análisis: **visualización de la señal ECG → limpieza de la señal → detección de picos R → cálculo de frecuencia cardíaca → segmentación de latidos → obtención del latido promedio**. A partir de estos resultados se compararon la frecuencia cardíaca, la amplitud de los picos R, la estabilidad del registro y la morfología de las ondas P, QRS y T entre las diferentes condiciones.
+
+---
+
 ## Resultados
 
 ### I. Lectura basal en reposo
@@ -80,3 +159,25 @@ Se observa una frecuencia cardíaca promedio de 104.8 bpm, con un pico de 112.5 
 **Figura 12:** Procesamiento de señal ECG con detección de picos R, cálculo de frecuencia cardíaca y promedio de latidos - Actividad aeróbica (III Derivada) escaladores. [Elaboración propia]
 
 Se observa una frecuencia cardíaca promedio de 120.1 bpm, la más elevada de las tres derivaciones bajo esta condición, con un pico marcado de 130.5 bpm a los 2.5 s al inicio del registro, reflejando el momento de mayor intensidad justo después del ejercicio. Los picos R presentan amplitudes entre 0.5 y 0.85, y el promedio de latidos muestra ondas P, Q, R, S y T bien definidas con dispersión moderada, consistente con el patrón de recuperación cardíaca post-esfuerzo observado en las tres derivaciones.
+
+---
+
+## Referencias bibliográficas
+
+[1] Y. Sattar and L. Chhabra, “Electrocardiogram,” in *StatPearls [Internet]*. Treasure Island, FL, USA: StatPearls Publishing, 2026. Available: https://www.ncbi.nlm.nih.gov/books/NBK549803/
+
+[2] E. A. Ashley and J. Niebauer, *Cardiology Explained*. London, UK: Remedica, 2004, ch. 3, “Conquering the ECG.” Available: https://www.ncbi.nlm.nih.gov/books/NBK2214/
+
+[3] M. Proença and K. Mrotzeck, *BITalino (r)evolution Lab Guide – Home Guide #2: Electrocardiography (ECG), Exploring Cardiac Signals at the Skin Surface*. PLUX – Wireless Biosignals, 2021. Available: https://support.pluxbiosignals.com/wp-content/uploads/2022/04/HomeGuide2_ECG.pdf
+
+[4] J. E. Hall, *Guyton and Hall Textbook of Medical Physiology*, 14th ed. Philadelphia, PA, USA: Elsevier, 2021.
+
+[5] S. M. Hawkins et al., “Hyperventilation-induced heart rate response as a potential marker for cardiovascular disease,” *Scientific Reports*, vol. 9, art. no. 17887, 2019. doi: 10.1038/s41598-019-54375-9.
+
+[6] M. Stewart and A. R. Bain, “Assessment of respiratory effort with EMG extracted from ECG recordings during prolonged breath holds: Insights into obstructive apnea and extreme physiology,” *Physiological Reports*, vol. 9, no. 10, e14873, 2021. doi: 10.14814/phy2.14873.
+
+[7] X. Bao, A. K. Abdala, and E. N. Kamavuako, “Estimation of the respiratory rate from localised ECG at different auscultation sites,” *Sensors*, vol. 21, no. 1, art. no. 78, 2021. doi: 10.3390/s21010078.
+
+[8] J. He, Y. Kinouchi, H. Yamaguchi, and H. Miyamoto, “Exercise-induced changes in R wave amplitude and heart rate in normal subjects,” *Journal of Electrocardiology*, vol. 28, no. 2, pp. 99–106, 1995. doi: 10.1016/S0022-0736(05)80280-8.
+
+
