@@ -150,9 +150,11 @@ El empleo de registros existentes permitirá desarrollar, evaluar y ajustar inic
 
 ### 🔗 Enlace de la base de datos
 
-**Pendiente de adjuntar.**
+**WESAD — Wearable Stress and Affect Detection**
 
-> El enlace definitivo será incorporado cuando se establezca la base de datos que se utilizará durante el desarrollo del proyecto.
+Dataset multimodal que contiene registros fisiológicos de 15 participantes, incluyendo ECG, EDA, EMG, respiración, temperatura y aceleración, bajo diferentes estados afectivos.
+
+👉 (https://ubi29.informatik.uni-siegen.de/usi/data_wesad.html)
 
 ---
 
@@ -431,7 +433,7 @@ Como parte del Laboratorio 05 se realizará un video explicativo donde se desarr
 
 ### ▶️ Enlace del video
 
-> El enlace correspondiente a YouTube o Google Drive será incorporado una vez que el video del Grupo 5 haya sido grabado y publicado.
+> https://drive.google.com/file/d/11WQvK9QtbKBLHI-QzD0Xkgpu8KF4WMqt/view?usp=drivesdk
 
 ---
 
