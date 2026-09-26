@@ -17,7 +17,7 @@ El presente proyecto propone el desarrollo de un sistema para el **monitoreo de 
 
 La propuesta se basa en el análisis de la **variabilidad de la frecuencia cardíaca (Heart Rate Variability, HRV)** obtenida a partir de los intervalos entre picos R consecutivos de la señal ECG.
 
-Para ello, se plantea una cadena de procesamiento que comprende:
+El sistema contempla una cadena de procesamiento compuesta por:
 
 1. adquisición de la señal ECG;
 2. preprocesamiento mediante filtros digitales;
@@ -27,13 +27,13 @@ Para ello, se plantea una cadena de procesamiento que comprende:
 6. análisis y clasificación de estados fisiológicos; y
 7. visualización de resultados mediante una interfaz gráfica.
 
-> **Alcance:** El sistema se plantea como una herramienta académica y experimental para el análisis de señales biomédicas. Los indicadores derivados del ECG no constituyen por sí solos un diagnóstico médico o psicológico.
+> **Alcance:** El sistema se plantea como una herramienta académica y experimental para el análisis de señales biomédicas. Los parámetros obtenidos a partir del ECG no constituyen por sí solos un diagnóstico médico o psicológico.
 
 ---
 
 # 🔎 1. Planteamiento del problema
 
-El estrés constituye una respuesta fisiológica frente a diferentes demandas del entorno y puede generar modificaciones en la actividad del **sistema nervioso autónomo**, reflejándose en cambios de la dinámica cardiovascular.
+El estrés puede producir modificaciones en la actividad del **sistema nervioso autónomo (SNA)** y generar cambios en la dinámica cardiovascular.
 
 Sin embargo, su evaluación suele realizarse mediante cuestionarios, autorreportes o mediciones efectuadas durante periodos limitados.
 
@@ -41,11 +41,11 @@ Estas estrategias presentan algunas limitaciones:
 
 | Limitación | Descripción |
 |---|---|
-| **Subjetividad** | La evaluación puede depender de la percepción y respuesta de la persona. |
+| **Subjetividad** | La evaluación depende de la percepción y respuesta del individuo. |
 | **Evaluación reactiva** | El problema puede identificarse después de la aparición de síntomas. |
-| **Medición discontinua** | Las evaluaciones aisladas dificultan observar cambios fisiológicos durante diferentes actividades. |
+| **Medición discontinua** | Las evaluaciones aisladas dificultan observar variaciones fisiológicas durante diferentes actividades. |
 
-Por ello, resulta relevante explorar métodos cuantitativos basados en señales fisiológicas que complementen la evaluación tradicional y permitan analizar cambios asociados con la respuesta al estrés.
+Por ello, resulta relevante incorporar señales fisiológicas que proporcionen información cuantitativa complementaria y permitan analizar cambios asociados con la respuesta al estrés.
 
 ---
 
@@ -69,8 +69,6 @@ Desarrollar un sistema de procesamiento de señales ECG capaz de extraer caracte
 
 Se propone implementar un sistema capaz de transformar una señal ECG en indicadores cuantitativos relacionados con la variabilidad cardíaca.
 
-La cadena general de procesamiento será:
-
 ```mermaid
 flowchart LR
     A[🫀 Señal ECG] --> B[📥 Adquisición]
@@ -82,35 +80,39 @@ flowchart LR
     G --> H[🖥️ Dashboard]
 ```
 
-### Flujo general
+### Flujo general del sistema
 
 **ECG → Filtrado → Picos R → Intervalos RR → HRV → Clasificación → Visualización**
 
-La propuesta busca integrar el procesamiento digital de señales con una herramienta visual que permita interpretar los parámetros obtenidos de forma clara.
+La propuesta integra el procesamiento digital de señales con una herramienta visual que permitirá interpretar los parámetros fisiológicos obtenidos.
 
 ---
 
 # 🧠 4. Fundamento fisiológico
 
-La respuesta al estrés está relacionada con cambios en la regulación del **sistema nervioso autónomo (SNA)**.
+La respuesta al estrés está relacionada con modificaciones en la regulación del **sistema nervioso autónomo**.
 
-La interacción entre las ramas simpática y parasimpática modifica la dinámica del ritmo cardíaco y, por lo tanto, el tiempo existente entre latidos consecutivos.
+La interacción entre sus ramas simpática y parasimpática modifica la dinámica del ritmo cardíaco y, por tanto, el tiempo existente entre latidos consecutivos.
 
 En una señal ECG, cada ciclo cardíaco puede identificarse mediante el **pico R** del complejo QRS.
 
-El intervalo entre dos picos R consecutivos se define como:
+El intervalo entre dos picos R consecutivos se denomina **intervalo RR**:
 
-\[
-RR_i = t_{R_{i+1}} - t_{R_i}
-\]
+**Intervalo RR = tiempo del siguiente pico R − tiempo del pico R actual**
 
-donde:
+La variación temporal de estos intervalos constituye la base para calcular la **variabilidad de la frecuencia cardíaca (HRV)**.
 
-- \(t_{R_i}\): instante correspondiente al pico R actual.
-- \(t_{R_{i+1}}\): instante correspondiente al siguiente pico R.
-- \(RR_i\): intervalo temporal entre ambos latidos.
+<p align="center">
+  <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/ECG-RRinterval.svg" width="650">
+</p>
 
-La variación de estos intervalos constituye la base para calcular la **variabilidad de la frecuencia cardíaca (HRV)**.
+<p align="center">
+  <em>Figura 1. Representación de dos ciclos ECG y del intervalo RR entre picos R consecutivos.</em>
+</p>
+
+<p align="center">
+  Fuente: Wikimedia Commons — ECG-RRinterval.svg
+</p>
 
 ---
 
@@ -120,158 +122,171 @@ La variación de estos intervalos constituye la base para calcular la **variabil
 
 La señal electrocardiográfica constituye la entrada principal del sistema.
 
-Se plantean dos alternativas de adquisición:
+Se plantean dos alternativas para disponer de los registros fisiológicos:
 
 ### 🔌 BITalino
 
-BITalino permitirá realizar registros experimentales de ECG mediante electrodos y módulos de adquisición de señales biomédicas.
+BITalino permitirá realizar la adquisición experimental de señales ECG mediante electrodos y módulos de instrumentación biomédica.
+
+Este dispositivo proporciona una plataforma orientada a la adquisición y experimentación con diferentes señales fisiológicas, incluyendo ECG.
+
+<p align="center">
+  <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/BITalino%20Board.png" width="650">
+</p>
+
+<p align="center">
+  <em>Figura 2. Plataforma BITalino para adquisición de señales biomédicas.</em>
+</p>
+
+<p align="center">
+  Fuente: Wikimedia Commons — BITalino Board
+</p>
 
 ### 📂 Base de datos
 
-También se contempla el uso de una **base de datos de señales fisiológicas** que contenga registros ECG asociados con diferentes condiciones experimentales.
+Como alternativa o complemento a la adquisición propia, se utilizará una **base de datos con registros ECG asociados con diferentes condiciones fisiológicas**.
 
-Esto permitirá evaluar inicialmente los algoritmos de procesamiento antes o durante la adquisición de registros propios.
+El empleo de registros existentes permitirá desarrollar, evaluar y ajustar inicialmente los algoritmos de procesamiento.
 
 ### 🔗 Enlace de la base de datos
 
 **Pendiente de adjuntar.**
 
-> El enlace definitivo de la base de datos utilizada será incorporado cuando se establezca la fuente de datos final del proyecto.
+> El enlace definitivo será incorporado cuando se establezca la base de datos que se utilizará durante el desarrollo del proyecto.
 
 ---
 
-## 5.2 Preprocesamiento
+## 5.2 Preprocesamiento de la señal
 
-Las señales ECG pueden contener ruido, interferencias eléctricas y componentes no deseados que dificultan la identificación de las características cardíacas.
+Las señales ECG pueden contener interferencias provenientes de la red eléctrica, movimiento, ruido instrumental y componentes fuera del rango de interés.
 
-Por ello, se propone realizar una etapa de acondicionamiento digital.
+Por ello, antes de realizar la extracción de características se propone una etapa de acondicionamiento digital.
 
 | Procesamiento | Función |
 |---|---|
-| **Filtro notch de 60 Hz** | Atenuar la interferencia asociada con la red eléctrica. |
-| **Filtro pasa-banda de 0.5–45 Hz** | Conservar las componentes principales del ECG y reducir señales fuera del rango de interés. |
+| **Filtro notch de 60 Hz** | Atenuar la interferencia asociada con la frecuencia de la red eléctrica. |
+| **Filtro pasa-banda de 0.5–45 Hz** | Conservar las principales componentes de interés del ECG y reducir señales fuera de banda. |
 
 ```mermaid
 flowchart LR
-    A[ECG crudo] --> B[Notch 60 Hz]
-    B --> C[Pasa-banda 0.5–45 Hz]
+    A[ECG crudo] --> B[Filtro Notch 60 Hz]
+    B --> C[Filtro pasa-banda 0.5–45 Hz]
     C --> D[ECG acondicionado]
 ```
 
-### Figura del preprocesamiento
-
-<p align="center">
-  <img src="docs/images/ecg_filtrado.png" width="700">
-</p>
-
-<p align="center">
-  <em>Figura 1. Ejemplo del preprocesamiento de la señal ECG.</em>
-</p>
+El resultado de esta etapa será una señal ECG acondicionada para facilitar la identificación del complejo QRS y los picos R.
 
 ---
 
 ## 5.3 Detección de picos R
 
-Después del filtrado se realizará la detección de los **picos R**, correspondientes a los eventos más representativos del complejo QRS.
+Después del preprocesamiento se realizará la detección de los **picos R**, correspondientes a uno de los eventos más representativos del complejo QRS.
 
-La ubicación temporal de estos picos permitirá identificar cada ciclo cardíaco y posteriormente calcular los intervalos RR.
+La ubicación temporal de estos picos permitirá identificar cada latido cardíaco y calcular posteriormente la separación entre latidos consecutivos.
 
-<p align="center">
-  <img src="docs/images/picos_r.png" width="700">
-</p>
+El procedimiento general será:
 
-<p align="center">
-  <em>Figura 2. Identificación de picos R e intervalos RR en una señal ECG.</em>
-</p>
+```mermaid
+flowchart LR
+    A[ECG filtrado] --> B[Detección del QRS]
+    B --> C[Localización del pico R]
+    C --> D[Serie de picos R]
+```
 
 ---
 
 ## 5.4 Cálculo de intervalos RR
 
-Una vez identificados los picos R, se calculará la diferencia temporal entre eventos consecutivos:
+Una vez detectados los picos R se calculará el tiempo transcurrido entre cada par de picos consecutivos.
 
-\[
-RR_i = t_{R_{i+1}} - t_{R_i}
-\]
+**RRᵢ = tiempo del pico Rᵢ₊₁ − tiempo del pico Rᵢ**
 
-La secuencia obtenida permite construir un **tacograma RR**, utilizado para estudiar la variabilidad del ritmo cardíaco.
+La secuencia de intervalos RR permite construir un **tacograma**, donde se representa cómo varía el tiempo entre latidos durante el registro.
 
-```text
-R₁            R₂               R₃
-│             │                │
-▼             ▼                ▼
-│<--- RR₁ --->│<---- RR₂ ----->│
-```
+Estas variaciones constituyen la entrada principal para el análisis de HRV.
 
 ---
 
-## 5.5 Extracción de características
+## 5.5 Extracción de características HRV
 
-A partir de los intervalos RR se calcularán parámetros de **variabilidad de la frecuencia cardíaca (HRV)**.
+La **variabilidad de la frecuencia cardíaca (HRV)** describe las variaciones temporales existentes entre latidos consecutivos.
 
-Inicialmente se consideran dos características temporales principales:
+<p align="center">
+  <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Heart%20rate%20variability%20%28HRV%29.svg" width="750">
+</p>
+
+<p align="center">
+  <em>Figura 3. Relación entre la señal ECG, los intervalos cardíacos y la variabilidad de la frecuencia cardíaca.</em>
+</p>
+
+<p align="center">
+  Fuente: Wikimedia Commons — Heart rate variability (HRV)
+</p>
+
+En este proyecto se consideran inicialmente dos características temporales:
 
 ### 📊 SDNN
 
-Corresponde a la desviación estándar de los intervalos NN:
+**SDNN (Standard Deviation of NN Intervals)** corresponde a la desviación estándar de los intervalos normales entre latidos.
 
-\[
-SDNN =
-\sqrt{
-\frac{1}{N-1}
-\sum_{i=1}^{N}
-(RR_i-\overline{RR})^2
-}
-\]
-
-Permite cuantificar la variabilidad global de los intervalos cardíacos analizados.
-
----
+Este indicador permite cuantificar la **variabilidad global** presente en la secuencia de intervalos analizados.
 
 ### 📊 RMSSD
 
-Corresponde a la raíz cuadrática de la media de las diferencias cuadráticas entre intervalos consecutivos:
+**RMSSD (Root Mean Square of Successive Differences)** corresponde a la raíz cuadrática del promedio de las diferencias sucesivas entre intervalos cardíacos.
 
-\[
-RMSSD =
-\sqrt{
-\frac{1}{N-1}
-\sum_{i=1}^{N-1}
-(RR_{i+1}-RR_i)^2
-}
-\]
+Este indicador permite analizar principalmente las **variaciones de corto plazo** entre latidos consecutivos.
 
-Este parámetro permite analizar variaciones de corto plazo entre latidos consecutivos.
+### Características consideradas
+
+| Característica | Información obtenida |
+|---|---|
+| **Intervalos RR** | Duración entre latidos consecutivos |
+| **Frecuencia cardíaca** | Número de latidos por minuto |
+| **SDNN** | Variabilidad global de los intervalos |
+| **RMSSD** | Variabilidad de corto plazo |
 
 ---
 
 # 🧠 6. Análisis y clasificación
 
-Las características obtenidas serán utilizadas para estudiar diferencias entre distintas condiciones fisiológicas.
+Las características extraídas de la señal ECG serán utilizadas para analizar diferencias entre distintas condiciones fisiológicas.
 
 Inicialmente se consideran tres estados:
 
 | Estado | Descripción |
 |---|---|
-| 🟢 **Neutral / Reposo** | Condición fisiológica basal. |
-| 🔴 **Estrés** | Condición asociada con cambios de la regulación autonómica. |
+| 🟢 **Neutral / Reposo** | Condición fisiológica basal o de menor activación. |
+| 🔴 **Estrés** | Condición asociada con modificaciones de la regulación autonómica. |
 | 🔵 **Recuperación** | Periodo posterior a la condición de estrés. |
 
-La clasificación definitiva dependerá del comportamiento de las características extraídas y de los datos disponibles.
+La estrategia definitiva de clasificación dependerá del comportamiento de las características y de los datos disponibles durante el desarrollo.
 
-La etapa podrá implementarse mediante:
+Podrá implementarse mediante:
 
-- criterios basados en características;
+- reglas basadas en características fisiológicas;
 - métodos estadísticos; o
-- modelos de **Machine Learning**, si los datos y resultados obtenidos justifican su aplicación.
+- algoritmos de **Machine Learning**, si los datos obtenidos justifican su utilización.
+
+```mermaid
+flowchart LR
+    A[Intervalos RR] --> B[Extracción HRV]
+    B --> C[SDNN]
+    B --> D[RMSSD]
+    C --> E[Análisis / Clasificación]
+    D --> E
+    E --> F[Neutral]
+    E --> G[Estrés]
+    E --> H[Recuperación]
+```
 
 ---
 
 # 🖥️ 7. Frontend propuesto
 
-El proyecto finalizará con el desarrollo de una **interfaz gráfica o dashboard** que permita visualizar de manera clara los resultados obtenidos.
+Todo proyecto finalizará con una **interfaz gráfica o dashboard** que permita visualizar de manera clara los resultados obtenidos durante el procesamiento.
 
-La interfaz podrá presentar:
+El frontend podrá incluir:
 
 - señal ECG original;
 - señal ECG filtrada;
@@ -280,7 +295,7 @@ La interfaz podrá presentar:
 - tacograma;
 - frecuencia cardíaca;
 - valores de SDNN y RMSSD;
-- estado fisiológico analizado; y
+- estado fisiológico identificado; y
 - evolución temporal de los indicadores.
 
 ```mermaid
@@ -294,19 +309,11 @@ flowchart TD
     G --> H[🖥️ Dashboard]
 ```
 
-### Figura del frontend
-
-<p align="center">
-  <img src="docs/images/dashboard.png" width="750">
-</p>
-
-<p align="center">
-  <em>Figura 3. Representación conceptual de la interfaz final del sistema.</em>
-</p>
+El dashboard constituirá la etapa final de integración del sistema y permitirá presentar los resultados del procesamiento de manera comprensible para el usuario.
 
 ---
 
-# 🧩 8. Arquitectura general
+# 🧩 8. Arquitectura general del sistema
 
 ```mermaid
 flowchart TB
@@ -316,25 +323,26 @@ flowchart TB
         B[Base de datos]
     end
 
-    subgraph PROCESSING["⚙️ Procesamiento"]
-        C[Señal ECG]
+    subgraph PROCESSING["⚙️ Procesamiento de señal"]
+        C[ECG]
         D[Notch 60 Hz]
         E[Pasa-banda 0.5–45 Hz]
         F[Detección de picos R]
         G[Intervalos RR]
     end
 
-    subgraph FEATURES["📊 Características HRV"]
-        H[SDNN]
-        I[RMSSD]
+    subgraph FEATURES["📊 Extracción de características"]
+        H[Frecuencia cardíaca]
+        I[SDNN]
+        J[RMSSD]
     end
 
     subgraph ANALYSIS["🧠 Análisis"]
-        J[Clasificación]
+        K[Clasificación]
     end
 
-    subgraph OUTPUT["🖥️ Frontend"]
-        K[Dashboard]
+    subgraph OUTPUT["🖥️ Salida"]
+        L[Dashboard]
     end
 
     A --> C
@@ -347,11 +355,13 @@ flowchart TB
 
     G --> H
     G --> I
+    G --> J
 
-    H --> J
-    I --> J
-
+    H --> K
+    I --> K
     J --> K
+
+    K --> L
 ```
 
 ---
@@ -361,11 +371,11 @@ flowchart TB
 | Variable | Descripción | Unidad |
 |---|---|---|
 | **ECG** | Actividad eléctrica cardíaca registrada | mV |
-| **Pico R** | Punto de referencia del complejo QRS | — |
-| **RR** | Tiempo entre picos R consecutivos | ms |
+| **Pico R** | Punto de referencia principal del complejo QRS | — |
+| **RR** | Tiempo entre dos picos R consecutivos | ms |
 | **HR** | Frecuencia cardíaca | bpm |
-| **SDNN** | Desviación estándar de intervalos NN | ms |
-| **RMSSD** | Variabilidad entre intervalos consecutivos | ms |
+| **SDNN** | Desviación estándar de los intervalos NN | ms |
+| **RMSSD** | Variabilidad de corto plazo entre intervalos consecutivos | ms |
 
 ---
 
@@ -383,153 +393,79 @@ flowchart TB
 
 ### ¿Qué estudia?
 
-El artículo analiza investigaciones relacionadas con el **estrés psicológico y la variabilidad de la frecuencia cardíaca (HRV)**.
+El artículo analiza investigaciones relacionadas con el **estrés y la variabilidad de la frecuencia cardíaca (HRV)**.
 
-La revisión estudia cómo diferentes situaciones de estrés producen modificaciones en parámetros relacionados con la regulación autonómica cardíaca.
+Los autores revisan evidencia sobre las modificaciones de diferentes parámetros de HRV ante situaciones de estrés y su relación con la regulación del sistema nervioso autónomo.
 
-### ¿Cuál es su aporte al proyecto?
+### ¿Por qué es relevante para el proyecto?
 
-Este trabajo proporciona sustento científico para utilizar la **HRV como una variable fisiológica relacionada con la respuesta al estrés**.
+El artículo proporciona sustento científico para utilizar características derivadas de la HRV como indicadores fisiológicos relacionados con la respuesta al estrés.
 
-Su relación con la propuesta puede resumirse mediante:
+La relación con el proyecto puede resumirse de la siguiente manera:
 
-```text
-Estrés
-   ↓
-Cambios en el sistema nervioso autónomo
-   ↓
-Modificación del ritmo cardíaco
-   ↓
-Variación de los intervalos RR
-   ↓
-Cambios en parámetros HRV
-   ↓
-Análisis fisiológico del estrés
+```mermaid
+flowchart TD
+    A[🧠 Estrés] --> B[Cambios en el sistema nervioso autónomo]
+    B --> C[Modificación de la dinámica cardíaca]
+    C --> D[Variación de intervalos RR]
+    D --> E[Cambios en parámetros HRV]
+    E --> F[Análisis fisiológico]
 ```
 
-Por ello, el artículo constituye una referencia importante para justificar la etapa de **extracción y análisis de características HRV** del sistema propuesto.
+Por ello, este artículo constituye una referencia principal para justificar la etapa de **extracción y análisis de características HRV**.
 
 ---
 
 # 🎥 11. Video de presentación
 
-El video correspondiente al Laboratorio 05 incluirá la explicación de:
+Como parte del Laboratorio 05 se realizará un video explicativo donde se desarrollarán los principales componentes del proyecto:
 
 - planteamiento del problema;
 - propuesta de solución;
 - fundamento fisiológico;
 - procesamiento de la señal ECG;
+- filtros digitales;
 - extracción de características HRV;
-- propuesta de frontend; y
+- propuesta del frontend; y
 - explicación del paper científico de referencia.
 
-### ▶️ Video del proyecto
+### ▶️ Enlace del video
 
-**Pendiente de adjuntar.**
-
-> El enlace de YouTube o Google Drive será incorporado una vez finalizada y publicada la presentación del Grupo 5.
+> El enlace correspondiente a YouTube o Google Drive será incorporado una vez que el video del Grupo 5 haya sido grabado y publicado.
 
 ---
 
 # 📈 12. Resultados esperados
 
-Al finalizar el proyecto se espera contar con una cadena de procesamiento capaz de:
+Al finalizar el proyecto se espera implementar una cadena funcional de procesamiento capaz de:
 
-1. Adquirir o importar una señal ECG.
-2. Visualizar la señal original.
-3. Aplicar filtros digitales para reducir interferencias.
-4. Detectar los picos R.
-5. Calcular los intervalos RR.
-6. Construir el tacograma.
-7. Obtener parámetros HRV como SDNN y RMSSD.
-8. Analizar diferencias entre diferentes estados fisiológicos.
-9. Implementar una estrategia de clasificación.
-10. Visualizar los resultados mediante un frontend.
+1. adquirir o importar registros ECG;
+2. visualizar la señal electrocardiográfica original;
+3. aplicar filtros digitales para reducir interferencias;
+4. detectar los picos R del ECG;
+5. calcular los intervalos RR;
+6. generar la información temporal necesaria para el análisis HRV;
+7. calcular parámetros como **SDNN y RMSSD**;
+8. analizar diferencias entre estados fisiológicos;
+9. implementar una estrategia de clasificación; y
+10. presentar los resultados mediante un **dashboard interactivo**.
 
----
-
-# ✅ 13. Cumplimiento de los requisitos del proyecto
-
-| Requisito | Propuesta |
-|---|---|
-| **Señal biomédica** | ✅ ECG / EKG |
-| **Procesamiento digital** | ✅ Incluido |
-| **Filtros digitales** | ✅ Notch 60 Hz + pasa-banda 0.5–45 Hz |
-| **Extracción de características** | ✅ RR, SDNN y RMSSD |
-| **Adquisición propia** | ✅ BITalino como alternativa |
-| **Base de datos** | ✅ Considerada |
-| **Enlace de base de datos** | ⏳ Pendiente de adjuntar |
-| **Análisis / clasificación** | ✅ Incluido |
-| **Machine Learning** | 🔄 Opcional según los resultados |
-| **Frontend** | ✅ Dashboard |
-| **Paper científico** | ✅ Incluido |
-| **Explicación del paper** | ✅ Incluida |
-| **Video** | ⏳ Pendiente de adjuntar |
-| **Presentación en Markdown** | ✅ Incluida en GitHub |
+El resultado esperado es una herramienta académica funcional que integre **adquisición, procesamiento digital, extracción de características, análisis y visualización** de señales electrocardiográficas.
 
 ---
 
-# 🗂️ 14. Estructura propuesta del repositorio
+# 📚 Referencias
 
-```text
-Laboratorio-05/
-│
-├── README.md
-│
-├── data/
-│   ├── raw/
-│   └── processed/
-│
-├── docs/
-│   └── images/
-│       ├── ecg_filtrado.png
-│       ├── picos_r.png
-│       └── dashboard.png
-│
-├── src/
-│   ├── preprocessing/
-│   ├── peak_detection/
-│   ├── hrv/
-│   ├── classification/
-│   └── frontend/
-│
-├── notebooks/
-│
-└── results/
-```
-
----
-
-# 🔬 15. Alcance del proyecto
-
-El proyecto se encuentra orientado al **procesamiento y análisis experimental de señales electrocardiográficas**.
-
-Comprende:
-
-- adquisición o importación de ECG;
-- acondicionamiento y filtrado digital;
-- detección de picos R;
-- cálculo de intervalos RR;
-- extracción de parámetros HRV;
-- análisis de estados fisiológicos; y
-- visualización mediante una interfaz gráfica.
-
-La propuesta busca mantener un alcance técnicamente viable para su desarrollo durante el ciclo académico, priorizando una cadena de procesamiento completa y funcional.
-
----
-
-# 📚 16. Referencias
-
-[1] World Health Organization and International Labour Organization,  
+**[1]** World Health Organization and International Labour Organization,  
 "Mental health at work: policy brief," *World Health Organization*, Geneva, Switzerland, Tech. Rep. WHO/MSD/HSM/2022.1, 2022.
 
-[2] S. Cohen, T. Kamarck, and R. Mermelstein,  
+**[2]** S. Cohen, T. Kamarck, and R. Mermelstein,  
 "A global measure of perceived stress," *J. Health Soc. Behav.*, vol. 24, no. 4, pp. 385–396, Dec. 1983.
 
-[3] H.-G. Kim, E.-J. Cheon, D.-S. Bai, Y. H. Lee, and B.-H. Koo,  
+**[3]** H.-G. Kim, E.-J. Cheon, D.-S. Bai, Y. H. Lee, and B.-H. Koo,  
 "Stress and heart rate variability: A meta-analysis," *Psychiatr. Investig.*, vol. 15, no. 3, pp. 235–245, Mar. 2018. doi: 10.30773/pi.2017.08.17.
 
-[4] Task Force of the European Society of Cardiology and the North American Society of Pacing and Electrophysiology,  
+**[4]** Task Force of the European Society of Cardiology and the North American Society of Pacing and Electrophysiology,  
 "Heart rate variability: Standards of measurement, physiological interpretation, and clinical use," *Circulation*, vol. 93, no. 5, pp. 1043–1065, Mar. 1996.
 
 ---
