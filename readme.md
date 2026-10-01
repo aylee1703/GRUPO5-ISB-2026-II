@@ -185,6 +185,29 @@ Ciclo 8
 
 </td>
 
+
+<td align="center">
+
+<img src="./assets/hudson.jpeg" width="150">
+
+<br>
+
+<b>Hudson Oliva Gonzales</b>
+
+<br>
+
+Ingeniería Biomédica  
+<br>
+Ciclo 7
+
+<br>
+
+<a href="mailto:hudson.oliva.g@upch.pe">
+✉️ hudson.oliva.g@upch.pe
+</a>
+
+</td>
+
 </tr>
 
 </table>
