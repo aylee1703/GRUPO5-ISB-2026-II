@@ -149,6 +149,54 @@ La comparación entre ambas condiciones musicales muestra el contraste más clar
 
 El aumento en Beta y Gamma con música fuerte es compatible con un estado de mayor activación, pero también con contaminación por actividad muscular (EMG). Los músculos de la frente, la mandíbula y el cuero cabelludo generan señales de banda ancha que contaminan Beta y Gamma, sobre todo en derivaciones frontales [7]. Si el sujeto tensó el rostro o se movió al ritmo de la música, ambos efectos se superponen y no pueden separarse con una sola derivación. La gran deriva de línea base registrada en esta condición, la mayor de todas, apoya la posibilidad de que hubo movimiento.
 
+## 8. Quiz – Preguntas y respuestas
+
+### P1. ¿Cuáles son las frecuencias significativas para las adquisiciones EEG? ¿Son las mismas en todas las áreas cerebrales?
+
+**Respuesta:**  
+Las principales bandas de frecuencia del EEG son: Delta (0–4 Hz), Theta (4–8 Hz), Alfa (8–12 Hz), Beta (12–25 Hz) y Gamma (>25 Hz). Las bandas son las mismas, pero su predominancia puede variar según el área cerebral y la actividad realizada. En nuestro experimento se observaron principalmente componentes en Delta, Theta y Alfa, además de actividad en frecuencias mayores durante algunas condiciones.
+
+---
+
+### P2. ¿Qué tipo de filtro es esencial al trabajar con señales EEG? ¿Por qué se necesita aplicar?
+
+**Respuesta:**  
+Es necesario utilizar un filtro pasabanda para conservar el rango de frecuencias de interés del EEG y reducir componentes no deseados, como la deriva de la línea base y ruido de muy baja o alta frecuencia. En nuestro laboratorio se utilizó un filtro pasabanda Butterworth de 4.° orden de 1–40 Hz. Esto permitió observar con mayor claridad la actividad EEG y analizar sus componentes frecuenciales.
+
+---
+
+### P3. ¿Se puede influir en la señal EEG mediante los pensamientos? ¿Qué acción se puede realizar para activar una banda de frecuencia? ¿Se pudo visualizar el cambio?
+
+**Respuesta:**  
+Sí. La actividad cerebral cambia según el estado mental y la tarea realizada. En nuestro experimento, durante las preguntas complejas se realizó una tarea de procesamiento mental, observándose principalmente actividad en Theta. Además, durante la apertura y cierre de ojos se pudo observar el comportamiento de la banda Alfa: esta tiende a aumentar con los ojos cerrados y disminuir al abrirlos. Por lo tanto, los cambios de actividad asociados a las tareas pudieron observarse en el análisis espectral de las señales.
+
+---
+
+### P4. Muestre una parte relevante de la señal EEG obtenida durante el experimento. ¿La señal corresponde a lo esperado? ¿Por qué?
+
+**Respuesta:**  
+Sí. Las señales obtenidas presentan cambios entre las diferentes condiciones experimentales. En el registro de apertura y cierre de ojos se observó una componente Alfa alrededor de 8–12 Hz, mientras que en las preguntas complejas se observó mayor presencia de componentes Theta. Estos resultados son compatibles con los cambios esperados de la actividad cerebral frente a las tareas realizadas. También se observaron artefactos asociados principalmente a movimientos oculares y musculares.
+
+---
+
+### P5. ¿Existe alguna diferencia en la señal entre las ubicaciones FP1 y FP2?
+
+**Respuesta:**  
+En nuestro laboratorio no se realizó una comparación independiente entre las posiciones FP1 y FP2, por lo que no es posible establecer una diferencia experimental entre ambas ubicaciones. El protocolo realizado utilizó una adquisición frontal y se analizaron las diferentes condiciones experimentales sobre esa misma configuración.
+
+---
+
+### P6. ¿Qué frecuencias deberían cambiar durante las tareas realizadas? ¿Se pueden observar estos cambios en la señal RAW? Describa lo observado.
+
+**Respuesta:**  
+Durante la apertura y cierre de ojos se esperaba un cambio principalmente en la banda Alfa (8–12 Hz), aumentando con los ojos cerrados y disminuyendo con los ojos abiertos. Durante las preguntas complejas se esperaba mayor participación de Theta (4–8 Hz), relacionada con el procesamiento mental. En la música fuerte se observó mayor contenido en frecuencias altas, especialmente en Beta y Gamma, aunque estas componentes también pueden estar afectadas por artefactos musculares. Los cambios son más fáciles de identificar mediante la FFT y la PSD que directamente en la señal RAW.
+
+---
+
+### P7. ¿La amplitud de la señal EEG es igual al nivel de concentración o enfoque aplicado?
+
+**Respuesta:**  
+No. La amplitud de la señal EEG por sí sola no representa directamente el nivel de concentración. La señal puede verse afectada por actividad cerebral, movimientos oculares, actividad muscular, movimiento de los electrodos y ruido eléctrico. Por ello, para evaluar cambios relacionados con una tarea cognitiva es más adecuado analizar características como la potencia de determinadas bandas de frecuencia, además de considerar los posibles artefactos.
 
 ## Referencias
 
