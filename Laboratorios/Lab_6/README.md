@@ -149,13 +149,6 @@ La comparación entre ambas condiciones musicales muestra el contraste más clar
 
 El aumento en Beta y Gamma con música fuerte es compatible con un estado de mayor activación, pero también con contaminación por actividad muscular (EMG). Los músculos de la frente, la mandíbula y el cuero cabelludo generan señales de banda ancha que contaminan Beta y Gamma, sobre todo en derivaciones frontales [7]. Si el sujeto tensó el rostro o se movió al ritmo de la música, ambos efectos se superponen y no pueden separarse con una sola derivación. La gran deriva de línea base registrada en esta condición, la mayor de todas, apoya la posibilidad de que hubo movimiento.
 
-### Limitaciones
-
-- Se analizó un solo sujeto y solo los primeros 20 s de cada registro, por lo que los resultados no pueden generalizarse.
-- La amplitud se expresó en unidades del conversor analógico-digital, sin conversión a µV, lo que impide comparar valores absolutos con la literatura.
-- La frecuencia de muestreo de 100 Hz limitó el análisis de Gamma a 40 Hz y produjo aliasing de la red eléctrica.
-- La ubicación frontal de los electrodos favorece la captación de artefactos oculares y musculares y reduce la detección del ritmo Alfa.
-- Las comparaciones entre condiciones se basaron en la inspección visual de las gráficas. Calcular la potencia relativa por banda en cada condición permitiría respaldarlas cuantitativamente.
 
 ## Referencias
 
