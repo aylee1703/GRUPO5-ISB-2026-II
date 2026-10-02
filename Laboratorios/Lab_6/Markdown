@@ -13,14 +13,13 @@ Audífonos y dispositivo de música
 2. Preparación del equipo
 Abrir OpenSignals (r)evolution en la computadora.
 Encender el BITalino Core BT 
-Conectar el sensor EEG y el cable de referencia a dos canales analógicos del BITalino.
+Conectar el sensor EEG y el cable de referencia al BITalino.
 Configurar el canal activo 
 
 3. Colocación de los electrodos
 Colocar los electrodos de gel en los dos broches del sensor EEG y uno en el cable de referencia.
 Colocar 2 sensores en la frente,
-Colocar el electrodo de referencia  detrás de la oreja.
-Tapar ojos y oidos del sujeto 
+Colocar el electrodo de referencia detrás de la oreja.
 
 4. Protocolo de adquisición
 Lectura basal (≈ 1–2 min): sin estímulos externos. Se le taparon al sujeto los ojos y los oídos para que no percibiera nada.
