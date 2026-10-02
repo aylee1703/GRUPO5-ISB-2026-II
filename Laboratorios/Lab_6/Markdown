@@ -1,0 +1,34 @@
+LABORATORIO 06 – Adquisición de señales EEG
+
+
+Paso a paso para la adquisición de las señales EEG
+1. Materiales
+Software OpenSignals (r)evolution
+BITalino (r)evolution Core BT
+Sensor EEG ensamblado (configuración bipolar, IN+ / IN−)
+Cable de referencia de 1 derivación
+electrodos de gel Ag/AgCl (2 para el sensor y 1 para la referencia)
+Dongle Bluetooth
+Audífonos y dispositivo de música
+
+2. Preparación del equipo
+Abrir OpenSignals (r)evolution en la computadora.
+Encender el BITalino Core BT 
+Conectar el sensor EEG y el cable de referencia a dos canales analógicos del BITalino.
+Configurar el canal activo 
+
+3. Colocación de los electrodos
+Colocar los electrodos de gel en los dos broches del sensor EEG y uno en el cable de referencia.
+Colocar 2 sensores en la frente,
+Colocar el electrodo de referencia  detrás de la oreja.
+Tapar ojos y oidos del sujeto 
+
+4. Protocolo de adquisición
+Lectura basal (≈ 1–2 min): sin estímulos externos. Se le taparon al sujeto los ojos y los oídos para que no percibiera nada.
+Ciclos de ojos abiertos / cerrados: se dio la señal de inicio con un toque en el hombro. Se realizaron 5 repeticiones del ciclo, con 5 s entre el cierre y la apertura de los ojos.
+Preguntas complejas: se hicieron 5 preguntas. Cada pregunta se grabó en una señal individual (1 pregunta = 1 señal), con 30 s para pensar la respuesta antes de pasar a la siguiente.
+Música suave: se grabó una señal individual mientras el sujeto escuchaba música suave.
+Música fuerte: se grabó una señal individual mientras el sujeto escuchaba una canción de música fuerte.
+Se detuvo la grabación y se guardaron los datos.
+
+Todo el procedimiento se realizó 2 veces
