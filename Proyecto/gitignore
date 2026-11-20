@@ -1,0 +1,23 @@
+# Entorno virtual local
+.venv/
+venv/
+ENV/
+
+# Datos crudos originales (solo lectura, no versionar)
+data_raw/
+
+# Archivos de ECG completo etiquetado y binarios mayores a 50 MB
+outputs/datos_etiquetados/
+*.S00
+*.s00
+*.npz
+*.zip
+
+# Caché de Python y archivos temporales
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
